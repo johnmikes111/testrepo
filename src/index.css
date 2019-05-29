@@ -49,3 +49,12 @@ body {
     margin-left: 20px;
   }
   
+
+.isCurrentStep {
+  font-weight: bolder;
+}
+
+.highlighted {
+  border-width: 5px;
+  border-color: greenyellow;
+}
