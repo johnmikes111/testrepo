@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import calculateWinner from './helpers/calculateWinner';
 
-//test branch 1
+
+//test branch 
 function Square(props) {
 
     return (
@@ -26,27 +27,29 @@ function Square(props) {
         />
       );
     }
+
+    renderGameTable = () => {
+      let table = [];
+      let current = 0;
+  
+      for (let i = 0; i < 3; i++) {
+        let children = [];
+        
+        for (let j = 0; j < 3; j++) {
+          children.push(this.renderSquare(current,this.props.winingPositions))
+          current++;
+        }
+        
+        table.push(<div className="board-row">{children}</div>);
+      }
+
+      return table;
+    }
   
     render() {
-      console.log(this.props.winingPositions);
-
       return (
         <div>
-          <div className="board-row">
-            {this.renderSquare(0,this.props.winingPositions)}
-            {this.renderSquare(1,this.props.winingPositions)}
-            {this.renderSquare(2,this.props.winingPositions)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(3,this.props.winingPositions)}
-            {this.renderSquare(4,this.props.winingPositions)}
-            {this.renderSquare(5,this.props.winingPositions)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(6,this.props.winingPositions)}
-            {this.renderSquare(7,this.props.winingPositions)}
-            {this.renderSquare(8,this.props.winingPositions)}
-          </div>
+         {this.renderGameTable()}
         </div>
       );
     }
