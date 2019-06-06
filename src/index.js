@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import calculateWinner from './helpers/calculateWinner';
 
-//nesto sam malo promenio...
+
+//test branch 
 function Square(props) {
 
     return (
