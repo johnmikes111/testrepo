@@ -28,6 +28,8 @@ function Square(props) {
       );
     }
 
+
+    // komentar iznad renderGameTable
     renderGameTable = () => {
       let table = [];
       let current = 0;
