@@ -4,7 +4,7 @@ import './index.css';
 import calculateWinner from './helpers/calculateWinner';
 
 
-//test branch 
+//test branch  samo izmena komentara
 function Square(props) {
 
     return (
